@@ -1,0 +1,118 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/about.less';
+
+
+.about {
+  background-color: #fff;
+  padding: 8.3em 0 7.3em;
+
+  @media(max-width: @screen-sm) {
+    padding: 3em 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .bgr_text {
+    position: absolute;
+    top: 48.5%;
+    left: 50.5%;
+    transform: translate(-50%,-50%);
+    font-size: 27.7em;
+    font-weight: bold;
+    z-index: 1;
+    opacity: .3;
+    color: #d9c36e;
+
+    @media(max-width: 910px) {
+      font-size: 20.7em;
+    }
+    @media(max-width: @screen-sm) {
+      display: none;
+    }
+  }
+
+  .row {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+    @media(max-width: 910px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .left_block {
+      width: 40%;
+      margin-bottom: 2em;
+
+      @media(max-width: 910px) {
+        width: 75%;
+      }
+      @media(max-width: @screen-sm) {
+        width: 100%;
+        text-align: center;
+      }
+
+      h2 {
+        line-height: 1.1;
+        margin-bottom: 1em;
+
+        @media(max-width: 910px) {
+          margin-bottom: .5em;
+        }
+
+        span.small {
+          font-size: .8em;
+        }
+      }
+    }
+
+    .img_wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 14.5em;
+
+      @media(max-width: 910px) {
+        top: 66%;
+        left: auto;
+        right: 5%;
+        transform: translateY(-50%);
+      }
+      @media(max-width: @screen-sm) {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+        margin-bottom: 2em;
+        width: 10em;
+      }
+    }
+
+    .right_block {
+      width: 32%;
+
+      @media(max-width: 910px) {
+        width: 50%;
+      }
+      @media(max-width: @screen-sm) {
+        width: 100%;
+      }
+
+      .text {
+        line-height: 1.4;
+        margin-bottom: 1.7em;
+      }
+    }
+  }
+
+}

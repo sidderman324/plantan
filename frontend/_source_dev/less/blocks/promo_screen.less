@@ -1,0 +1,51 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/promo_screen.less';
+
+
+.promo_screen {
+  height: 100vh;
+  padding-top: 6vh;
+  padding-bottom: 10vh;
+  background-image: url('../imgs/main_bgr.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  .container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+
+    .text_block {
+      margin-bottom: 9vh;
+
+      @media(max-width: @screen-sm) {
+        text-align: center;
+      }
+    }
+
+    h1 {
+      font-size: 3.3em;
+      margin-bottom: 0.6em;
+
+      @media(max-width: @screen-sm) {
+        font-size: 2.1em;
+      }
+    }
+    .description {
+      width: 26.7em;
+      margin-bottom: 2em;
+
+      @media(max-width: @screen-sm) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+  }
+
+}

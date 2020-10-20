@@ -1,0 +1,116 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/textpage.less';
+
+
+.textpage {
+  padding: 8em 0 2em;
+  display: inline-block;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.6em;
+
+    @media(max-width: @screen-sm) {
+      font-size: 2.1em;
+    }
+  }
+  h2 {
+    font-size: 2.4em;
+    margin-bottom: .5em;
+
+    @media(max-width: @screen-sm) {
+      font-size: 1.8em;
+      text-align: center;
+    }
+  }
+
+  .notification {
+    position: relative;
+    padding-left: 1.5em;
+    font-style: italic;
+    margin: 2em 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 100%;
+      background-color: #f00;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  p {
+    margin-bottom: .5em;
+  }
+
+  .table {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    overflow-x: auto;
+
+    .table_head,
+    .table_body {
+      width: 100%;
+      min-width: 500px;
+    }
+
+    .table_head {
+      background-color: rgba(252,219,90,.6);
+    }
+
+    .table_body {
+      .row {
+        border-bottom: 1px solid rgba(252,219,90,.6);
+      }
+    }
+
+    .row {
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+
+      .cell {
+        padding: 1em .3em;
+      }
+    }
+    &--price {
+      .cell:nth-child(1) { width: 10%; padding-left: .6em; }
+      .cell:nth-child(2) { width: 25%; }
+      .cell:nth-child(3) {  width: 25%; }
+      .cell:nth-child(4) {  width: 25%; }
+      .cell:nth-child(5) {  width: 15%; }
+    }
+    &--program {
+      .cell:nth-child(1) { width: 10%; padding-left: .6em; }
+      .cell:nth-child(2) { width: 15%; }
+      .cell:nth-child(3) {  width: 25%; }
+      .cell:nth-child(4) {  width: 15%; }
+      .cell:nth-child(5) {  width: 35%; }
+    }
+    &--info {
+      .row { background-color: rgba(252,219,90,.6); }
+      .row:nth-child(2n) { background-color: transparent; }
+      .cell:nth-child(1) { width: 35%; }
+      .cell:nth-child(2) { width: 65%; }
+    }
+  }
+
+
+  sup {
+    color: #f00;
+  }
+
+  .btn {
+    font-size: .9em;
+    margin-top: 2em;
+  }
+}

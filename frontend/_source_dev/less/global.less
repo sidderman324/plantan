@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'RUBSN';
+  src: url('../fonts/RUBSN.eot');
+  src: url('../fonts/RUBSN.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/RUBSN.woff2') format('woff2'),
+  url('../fonts/RUBSN.woff') format('woff'),
+  url('../fonts/RUBSN.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+    font-family: 'Futura_PT';
+    src: url('../fonts/FuturaPT-Book.eot');
+    src: url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Book.woff') format('woff'),
+        url('../fonts/FuturaPT-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura_PT';
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Bold.woff') format('woff'),
+        url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura_PT';
+    src: url('../fonts/FuturaPT-Light.eot');
+    src: url('../fonts/FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Light.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Light.woff') format('woff'),
+        url('../fonts/FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none !important;
+}
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+h1,h2,p {
+  margin: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  position: relative;
+  font-family: 'Futura_PT', sans-serif;
+  transition: 0.3s;
+  overflow-x: hidden;
+  color: @deep-gray;
+  background-color: #f5f5f5;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @media(max-width: @screen-lg) {
+    font-size: 14px;
+  }
+  @media(max-width: 910px) {
+    font-size: 16px !important;
+  }
+  @media(max-width: @screen-md) {
+    font-size: 12px;
+  }
+  @media(max-width: @screen-sm) {
+    font-size: 4vw !important;
+  }
+}
+
+.container {
+  padding: 0 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 1240px;
+
+  @media(max-width: @screen-lg) {
+    width: 1000px;
+    padding: 0 30px;
+  }
+  @media(max-width: @screen-md) {
+    width: 880px;
+    padding: 0 20px;
+  }
+  @media(max-width: 910px) {
+    width: @screen-sm !important;
+    padding: 0 20px !important;
+  }
+  @media(max-width: @screen-sm) {
+    width: 100% !important;
+    padding: 0 5% !important;
+  }
+}
+
+
+.bold {
+  font-weight: bold;
+}
+.size_1, .cell, .textpage p, .notification, .textpage li {
+  font-size: 1.25em;
+
+  @media(max-width: @screen-sm) {
+    font-size: 1em;
+  }
+}
+.size_2 {
+  font-size: 1.375em;
+
+  @media(max-width: @screen-sm) {
+    font-size: 1.1em;
+  }
+}
+.size_3 {
+  font-size: 1.1em;
+
+  @media(max-width: @screen-sm) {
+    font-size: .9em;
+  }
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.center {
+  text-align: center;
+}
+section h2 {
+  font-weight: normal;
+  font-size: 3.3em;
+
+  @media(max-width: @screen-sm) {
+    font-size: 1.8em;
+    text-align: center;
+  }
+}
+
+.btn {
+  font-size: 1.05em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0;
+  border-radius: 100px;
+  padding: 0 3em;
+  height: 3.2em;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  transition: .3s;
+
+  @media(max-width: @screen-sm) {
+    font-size: .9em;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    background-color: @yellow;
+    z-index: -1;
+    transition: .3s;
+  }
+
+  &:after {
+    top: 4px;
+    left: 3px;
+    background-color: #d9c36e;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:after { top: 0; left: 0; }
+  }
+
+  &--transparent {
+    border: 2px solid @yellow;
+    background-color: transparent;
+
+    &:hover {
+      background-color: @yellow;
+    }
+
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+}
