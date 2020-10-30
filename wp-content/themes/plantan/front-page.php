@@ -152,29 +152,29 @@ get_header();
 				</div>
 
 				<div class="link_block">
-					<a href="/sezonnaya-programma-otbora-prob-yablok-v-sadu/" class="link_card">
+					<a href="/sampling_program_apples/" class="link_card">
 						<span>яблоки</span>
 						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_apple.jpg" alt="">
 					</a>
-					<a href="#" class="link_card">
+					<a href="/sampling_program_grapes/" class="link_card">
 						<span>виноград</span>
 						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_grape.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="link_block">
-					<a href="#" class="link_card">
+					<a href="/sampling_program_strawberry/" class="link_card">
 						<span>клубника</span>
 						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_strawberry.jpg" alt="">
 					</a>
-					<a href="#" class="link_card">
+					<a href="/sampling_program_wheat/" class="link_card">
 						<span>пшеница</span>
 						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_wheat.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="link_block">
-					<a href="#" class="link_card link_card--big">
+					<a href="/sampling_program_apples/" class="link_card link_card--big">
 						<span>все программы</span>
 						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_veg.jpg" alt="">
 					</a>

@@ -27,7 +27,9 @@ get_header();
                 <div class="cell"><?= $value['table_item']['table_head']['cell_3']; ?></div>
                 <div class="cell"><?= $value['table_item']['table_head']['cell_4']; ?></div>
                 <div class="cell"><?= $value['table_item']['table_head']['cell_5']; ?></div>
-                <div class="cell"><?= $value['table_item']['table_head']['cell_6']; ?></div>
+                <?php if($value['table_item']['table_head']['cell_6'] != '') { ?>
+                  <div class="cell"><?= $value['table_item']['table_head']['cell_6']; ?></div>
+                <? } ?>
               </div>
             </div>
             <div class="table_body">
@@ -40,7 +42,9 @@ get_header();
                   <div class="cell"><?= $value_content['cell_3']; ?></div>
                   <div class="cell"><?= $value_content['cell_4']; ?></div>
                   <div class="cell"><?= $value_content['cell_5']; ?></div>
-                  <div class="cell"><?= $value_content['cell_6']; ?></div>
+                  <?php if($value_content['cell_6'] != '') { ?>
+                    <div class="cell"><?= $value_content['cell_6']; ?></div>
+                  <? } ?>
                 </div>
               <? } ?>
 

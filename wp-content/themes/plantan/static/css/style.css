@@ -1460,6 +1460,8 @@ section h2 {
       flex-direction: row;
   -ms-flex-align: baseline;
       align-items: baseline;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .textpage .table .row .cell {
   padding: 1em .3em;

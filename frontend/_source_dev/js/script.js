@@ -115,7 +115,7 @@ $(document).ready(function(){
         }
       }
       $(document).ready(slider);
-      $(window).resize(slider);
+      // $(window).resize(slider);
 
 
 
