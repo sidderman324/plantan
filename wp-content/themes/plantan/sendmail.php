@@ -11,10 +11,12 @@ if (isset($_POST["message"])) { $person_message = htmlspecialchars($_POST["messa
 
 
 $url_google_api = 'https://www.google.com/recaptcha/api/siteverify';
-$secret = '6Ldw1-sUAAAAAJPSj-rza4abuU0G8cp6zGxHBGoV';
+$secret = '6LeeeuAZAAAAAEnI-oe0Q804siVvNCOlPZZjTzuP';
 $query = $url_google_api.'?secret='.$secret.'&response='.$_POST['grecaptcha'].'&remoteip='.$_SERVER['REMOTE_ADDR'];
 $data = json_decode(file_get_contents($query), true); // записываем полученные данные в виде ассоциативного массива
 $score = $data['score']; // оценка Google recaptcha v3, от 0.1 до 0.9, где 0.9 означает "точно не спам"
+
+// print_r($data);
 
 // if($data['success']) {
 	if(($person_name != '') && ($person_phone != '')) {
@@ -32,6 +34,7 @@ $score = $data['score']; // оценка Google recaptcha v3, от 0.1 до 0.9,
 
 		// $mail->addAddress('s.i.sidorovkrd@yandex.ru');
 		$mail->addAddress('syd.phoenix@gmail.com');
+		$mail->addAddress('plasmida@mail.ru');
 
 		$mail->isHTML(true);
 		$mail->Subject = 'Новая заявка Листовая диагностика';
@@ -61,8 +64,8 @@ $score = $data['score']; // оценка Google recaptcha v3, от 0.1 до 0.9,
 		} else {
 			echo 'ok';
 		}
-	}
-// }
+	// }
+}
 
 
 ?>

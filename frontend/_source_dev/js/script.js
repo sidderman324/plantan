@@ -3,6 +3,31 @@ $(document).ready(function(){
   var winWidth = $(window).width();
 
 
+
+  /////////////////////
+  // Работа файлов куки
+  $(function () {
+    /* Проверяем запись в куках о посещении */
+    /* Если запись есть - ничего не происходит */
+    if (!$.cookie('cookieAccept')) {
+      /* если cookie не установлено появится окно */
+      /* с задержкой 3 секунды */
+      var delay_popup = 3000;
+      setTimeout("document.querySelector('.cookie_box').style.display='flex'", delay_popup);
+    }
+  });
+
+  /* Закрытие полосы cookie */
+  $('body').on('click', '.js-cookie-close', function () {
+    $.cookie('cookieAccept', true, {
+      /* Время хранения cookie в днях */
+      expires: 30,
+      path: '/'
+    });
+    $('.cookie_box').fadeOut(100);
+  });
+
+
   function phone_mask() {
 
     $("#phone").inputmask("+7 (999) 999-9999");
@@ -34,12 +59,12 @@ $(document).ready(function(){
         var m_method = $(this).attr('method');
         var m_action = $(this).attr('action');
         var m_data = $(this).serialize();
-      //
-      //   // grecaptcha.ready(function () {
-      //     // grecaptcha.execute('6Ldw1-sUAAAAAJRa0wbPNEKqVOFiaOy9NMuVLOGE', {
-      //       // action: 'sendform'
-      //     // })
-      //     .then(function(token) {
+
+        grecaptcha.ready(function () {
+          grecaptcha.execute('6LeeeuAZAAAAAIDXdLUYONGfJyvpm7HECxy26xbj', {
+            action: 'sendform'
+          })
+          .then(function(token) {
             $.ajax({
               type: m_method,
               url: m_action,
@@ -51,8 +76,8 @@ $(document).ready(function(){
             .fail(function() {
               feedback_message('Ваша заявка не отправлена, повторите попытку позднее.');
             });
-      //     });
-      //   // });
+          });
+        });
       });
 
 
@@ -182,4 +207,3 @@ $(document).ready(function(){
 
 
     });
-

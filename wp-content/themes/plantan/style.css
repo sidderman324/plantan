@@ -6,3 +6,6 @@ Theme Name: Листовая диагностика
   margin-bottom: .5em;
   font-weight: normal;
 }
+.steps_block .container .steps_wrapper .step_item .step_num {
+  color: #333;
+}

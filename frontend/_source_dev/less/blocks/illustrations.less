@@ -1,0 +1,33 @@
+// Для импорта в диспетчер подключений: @import './../_source_dev/less/blocks/illustrations.less';
+
+
+.illustrations {
+  padding: 2em 0;
+
+  h2 {
+    margin: 0;
+  }
+
+  .ill_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    padding-top: 2em;
+
+    .item {
+      p {
+        text-align: left;
+
+        font-size: 1.375em;
+
+        @media(max-width: @screen-sm) {
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    &--wide {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -101,6 +101,21 @@ get_header();
 			</div>
 		</section>
 
+		<section class="protocol_example">
+			<div class="container">
+				<h2>Пример <span class="bold">протокола</span></h2>
+
+				<p class="text size_1">После того, как будет проведена диагностика, вам будет предоставлена подробная протокол с результатами анализа, включающий сравнение с нормами и краткие рекомендации по питанию растений.</p>
+				<p class="text size_1">Протокол будет содержать информацию о выявленных проблемах и нарушениях, а также рекомендации по внесению тех или иных элементов питания для достижения лучших результатов.</p>
+
+				<div class="protocol_wrapper">
+					<img src="<?= get_stylesheet_directory_uri(); ?>/example.jpg" alt="">
+				</div>
+
+				<a href="<?= get_stylesheet_directory_uri(); ?>/example.pdf" download="Образец протокола Листовой диагностики" class="btn">Скачать pdf</a>
+			</div>
+		</section>
+
 
 		<section class="preferences" id="preferences">
 			<div class="container">
@@ -151,34 +166,29 @@ get_header();
 					<p class="text size_1">На основе этого сравнения делается экспертное заключение и решается вопрос об использовании тех или иных удобрений.</p>
 				</div>
 
-				<div class="link_block">
-					<a href="/sampling_program_apples/" class="link_card">
-						<span>яблоки</span>
-						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_apple.jpg" alt="">
-					</a>
-					<a href="/sampling_program_grapes/" class="link_card">
-						<span>виноград</span>
-						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_grape.jpg" alt="">
-					</a>
-				</div>
+				<a href="/sampling_program_apples/" class="link_card">
+					<span>яблоки</span>
+					<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_apple.jpg" alt="">
+				</a>
+				<a href="/sampling_program_grapes/" class="link_card">
+					<span>виноград</span>
+					<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_grape.jpg" alt="">
+				</a>
 
-				<div class="link_block">
-					<a href="/sampling_program_strawberry/" class="link_card">
-						<span>клубника</span>
-						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_strawberry.jpg" alt="">
-					</a>
-					<a href="/sampling_program_wheat/" class="link_card">
-						<span>пшеница</span>
-						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_wheat.jpg" alt="">
-					</a>
-				</div>
+				<a href="/sampling_program_strawberry/" class="link_card">
+					<span>клубника</span>
+					<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_strawberry.jpg" alt="">
+				</a>
+				<a href="/sampling_program_wheat/" class="link_card">
+					<span>пшеница</span>
+					<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_wheat.jpg" alt="">
+				</a>
 
-				<div class="link_block">
-					<a href="/sampling_program_apples/" class="link_card link_card--big">
-						<span>все программы</span>
-						<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_veg.jpg" alt="">
-					</a>
-				</div>
+				<a href="/sampling_program_apples/" class="link_card link_card--big">
+					<span>все программы</span>
+					<img src="<?= get_stylesheet_directory_uri(); ?>/static/imgs/program_veg.jpg" alt="">
+				</a>
+
 
 			</div>
 		</section>
@@ -192,7 +202,7 @@ get_header();
 
 					<div class="left_block">
 						<h2><span class="bold">О лаборатории</span><br><span class="small">«Листовая диагностика»</span></h2>
-						<a href="#" class="btn btn--transparent">Подробнее</a>
+						<a href="/about/" class="btn btn--transparent">Подробнее</a>
 					</div>
 
 					<div class="img_wrapper">
@@ -213,27 +223,9 @@ get_header();
 				<h2><span class="bold">Заинтересовались?</span></h2>
 				<p class="descr">Оставьте контакты, мы с вами свяжемся</p>
 
-				<form action="<?= get_stylesheet_directory_uri() . '/sendmail.php'; ?>" method="POST">
-					<div class="input_box">
-						<input type="text" class="input_text" id="name" name="name" placeholder="Ваше имя">
-					</div>
-					<div class="input_box">
-						<input type="text" class="input_text" id="phone" name="phone" placeholder="Телефон">
-					</div>
-					<div class="input_box">
-						<input type="text" class="input_text" id="mail" name="mail" placeholder="E-mail">
-					</div>
-					<div class="input_box">
-						<textarea class="input_text" id="message" name="message" placeholder="Сообщение" style="resize: vertical; min-height: 4em;"></textarea>
-					</div>
-					<div class="custom_checkbox">
-						<input id="confirmation" type="checkbox">
-						<label for="confirmation" name="confirmation"><span>Я согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
-					</div>
-					<div class="btn">
-						<input type="submit" name="" value="Отправить" class="submit_btn">
-					</div>
-				</form>
+				<?= do_shortcode('[contact-form-7 id="111" title="Обратная связь"]'); ?>
+
+
 			</div>
 		</section>
 

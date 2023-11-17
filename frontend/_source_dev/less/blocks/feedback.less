@@ -8,6 +8,13 @@
   background-repeat: no-repeat;
   background-position: bottom center;
 
+
+  .wpcf7-spinner {
+    // display: none;
+    position: absolute;
+    left: 100%;
+  }
+
   @media(max-width: @screen-sm) {
     padding: 3em 0;
   }
@@ -50,13 +57,16 @@
         padding: 0.5em 0;
         margin-bottom: 1.1em;
 
-        .input_text {
+        .input_text,
+        .wpcf7-textarea,
+        .wpcf7-text {
           width: 100%;
           background-color: transparent;
           border: 0;
           border-bottom: 1px solid @deep-gray;
           font-size: 1.1em;
           padding: 0.5em 0.7em;
+          font-family: 'Futura_PT', sans-serif;
 
           @media(max-width: @screen-sm) {
             font-size: 1em;
@@ -171,16 +181,16 @@
   left: .5em;
   opacity: 0;
 }
-[type='checkbox']:not(:checked) + label,
-[type='checkbox']:checked + label {
+[type='checkbox']:not(:checked) + span label,
+[type='checkbox']:checked + span label {
   position: relative;
   padding-left: 2.1em;
   cursor: pointer;
 }
 
 /* checkbox aspect */
-[type='checkbox']:not(:checked) + label:before,
-[type='checkbox']:checked + label:before {
+[type='checkbox']:not(:checked) + span label:before,
+[type='checkbox']:checked + span label:before {
   content: '';
   position: absolute;
   top: .1em;
@@ -192,8 +202,8 @@
   background: transparent;
 }
 /* checked mark aspect */
-[type='checkbox']:not(:checked) + label:after,
-[type='checkbox']:checked + label:after {
+[type='checkbox']:not(:checked) + span label:after,
+[type='checkbox']:checked + span label:after {
   content: '';
   background-image: url('../imgs/tick-sign.svg');
   background-size: contain;
@@ -208,24 +218,24 @@
   height: 1.1em;
 }
 /* checked mark aspect changes */
-[type='checkbox']:not(:checked) + label:after {
+[type='checkbox']:not(:checked) + span label:after {
   transform: scale(0);
   opacity: 0;
 }
-[type='checkbox']:checked + label:after {
+[type='checkbox']:checked + span label:after {
   transform: scale(1);
   opacity: 1;
 }
 /* disabled checkbox */
-[type='checkbox']:disabled:not(:checked) + label:before,
-[type='checkbox']:disabled:checked + label:before {
+[type='checkbox']:disabled:not(:checked) + span label:before,
+[type='checkbox']:disabled:checked + span label:before {
   border-color: #bbb;
   background-color: #ddd;
   box-shadow: none;
 }
-[type='checkbox']:disabled:checked + label:after {
+[type='checkbox']:disabled:checked + span label:after {
   color: #999;
 }
-[type='checkbox']:disabled + label {
+[type='checkbox']:disabled + span label {
   color: #aaa;
 }
